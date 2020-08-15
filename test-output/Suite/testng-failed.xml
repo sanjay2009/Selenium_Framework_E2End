@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.mystore.utility.ListenerClass"/>
+  </listeners>
+  <test name="Test(failed)">
+    <parameter name="Browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.mystore.testcases.DatatDrivenTestLogin">
+        <methods>
+          <include name="tearDown"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="signIn"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.DatatDrivenTestLogin -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

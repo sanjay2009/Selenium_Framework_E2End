@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Parallel]" parallel="tests">
+  <test name="Firefox Test(failed)" parallel="tests">
+    <parameter name="Browser" value="firefox"/>
+    <classes>
+      <class name="com.mystore.testcases.AccountCreationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="beforeSuite"/>
+          <include name="signIn"/>
+          <include name="afterSuite"/>
+          <include name="enterNewAccountDetails"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.AccountCreationTest -->
+    </classes>
+  </test> <!-- Firefox Test(failed) -->
+  <test name="IE Test(failed)" parallel="tests">
+    <parameter name="Browser" value="ie"/>
+    <classes>
+      <class name="com.mystore.testcases.AccountCreationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="beforeSuite"/>
+          <include name="signIn"/>
+          <include name="afterSuite"/>
+          <include name="enterNewAccountDetails"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.AccountCreationTest -->
+    </classes>
+  </test> <!-- IE Test(failed) -->
+  <test name="Chrome Test(failed)" parallel="tests">
+    <parameter name="Browser" value="chrome"/>
+    <classes>
+      <class name="com.mystore.testcases.AccountCreationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="beforeSuite"/>
+          <include name="signIn"/>
+          <include name="afterSuite"/>
+          <include name="enterNewAccountDetails"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.AccountCreationTest -->
+    </classes>
+  </test> <!-- Chrome Test(failed) -->
+</suite> <!-- Failed suite [Parallel] -->
